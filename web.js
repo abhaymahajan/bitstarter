@@ -71,6 +71,11 @@ fs.exists(fileName, function(exists) {
 //var express = require('express');//
 //var app = express.createServer(express.logger());
 //app.get('/', function(request, response) {
+
+var express = require('express');
+
+var app = express.createServer(express.logger());
+
 var fs = require("fs");
 var fileName = "index.html";
 fs.exists(fileName, function(exists) {
@@ -89,8 +94,8 @@ fs.exists(fileName, function(exists) {
 });
 
 
-var express = require('express');
-var app = express.createServer(express.logger());
+//var express = require('express');
+//var app = express.createServer(express.logger());
 var data = fs.readFileSync("index.html", "utf8");
 app.get('/', function(request, response) {
 
