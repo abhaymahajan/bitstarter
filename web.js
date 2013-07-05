@@ -81,7 +81,7 @@ fs.exists(fileName, function(exists) {
         fs.read(fd, buffer, 0, buffer.length, null, function(error, bytesRead, buffer) {
           var data = buffer.toString("utf8", 0, buffer.length);
           console.log(data);
-  //        fs.close(fd);
+          fs.close(fd);
         });
       });
     });
